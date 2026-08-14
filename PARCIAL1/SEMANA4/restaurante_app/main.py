@@ -1,4 +1,4 @@
-"""Punto de entrada: crea objetos, los agrega al servicio y muestra información."""
+"""Punto de entrada del sistema de gestión del restaurante."""
 
 from modelos.producto import Producto
 from modelos.cliente import Cliente
@@ -6,35 +6,35 @@ from servicios.restaurante import Restaurante
 
 
 def main():
-    # Crear servicio principal
+    # Crear el servicio principal del restaurante.
     restaurante = Restaurante("La Buena Mesa")
 
-    # Crear algunos productos
-    p1 = Producto("Lomo Saltado", 12.50, "Plato fuerte", "Carne salteada con papas y cebolla")
-    p2 = Producto("Ceviche", 9.75, "Entrada", "Pescado fresco marinado en limón")
-    p3 = Producto("Inca Kola 500ml", 2.00, "Bebida", "Refresco tradicional")
+    # Crear dos productos de ejemplo con datos de tipo str, float, int y bool.
+    producto_uno = Producto("Lomo Saltado", 15.50, "Plato fuerte", "Carne salteada con arroz y papas", 8, True)
+    producto_dos = Producto("Jugo de Maracuyá", 3.20, "Bebida", "Bebida natural fresca", 12, True)
+    producto_tres = Producto("Ensalada César", 8.90, "Entrada", "Lechuga, pollo y aderezo", 5, True)
 
-    # Agregar productos al restaurante
-    restaurante.agregar_producto(p1)
-    restaurante.agregar_producto(p2)
-    restaurante.agregar_producto(p3)
+    # Crear dos clientes de ejemplo con atributos de tipo str, int y bool.
+    cliente_uno = Cliente("María Pérez", "+591 71234567", "maria@example.com", 28, True)
+    cliente_dos = Cliente("Carlos López", "+591 70567890", "carlos@example.com", 35, False)
 
-    # Crear y registrar clientes
-    c1 = Cliente("María Pérez", telefono="+591-71234567")
-    c2 = Cliente("Carlos López", email="carlos.lopez@example.com")
+    # Agregar los objetos a las listas manejadas por el servicio.
+    restaurante.agregar_producto(producto_uno)
+    restaurante.agregar_producto(producto_dos)
+    restaurante.agregar_producto(producto_tres)
 
-    restaurante.registrar_cliente(c1)
-    restaurante.registrar_cliente(c2)
+    restaurante.registrar_cliente(cliente_uno)
+    restaurante.registrar_cliente(cliente_dos)
 
-    # Mostrar resumen inicial
+    # Mostrar la información registrada en la consola.
     restaurante.mostrar_resumen()
 
-    # Aplicar un descuento a un producto y mostrar el cambio
-    print('\nAplicando descuento del 10% a Ceviche...')
-    prod = restaurante.buscar_producto("ceviche")
-    if prod:
-        prod.aplicar_descuento(10)
-    restaurante.listar_productos()
+    # Aplicar una modificación adicional para demostrar el uso de los métodos.
+    print("\nActualizando stock y estado de membresía...")
+    producto_dos.actualizar_stock(-3)
+    cliente_uno.cambiar_estado_miembro(True)
+    print(f"Producto actualizado: {producto_dos}")
+    print(f"Cliente actualizado: {cliente_uno}")
 
 
 if __name__ == "__main__":
