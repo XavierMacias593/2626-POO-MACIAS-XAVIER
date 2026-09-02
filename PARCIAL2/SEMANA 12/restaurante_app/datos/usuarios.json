@@ -1,0 +1,17 @@
+[
+    {
+        "identificacion": "U001",
+        "nombre": "Ana",
+        "correo": "ana@email.com"
+    },
+    {
+        "identificacion": "U002",
+        "nombre": "Luis",
+        "correo": "luis@email.com"
+    },
+    {
+        "identificacion": "0930969845",
+        "nombre": "xavier macias",
+        "correo": "mxavi19@gmail.com"
+    }
+]

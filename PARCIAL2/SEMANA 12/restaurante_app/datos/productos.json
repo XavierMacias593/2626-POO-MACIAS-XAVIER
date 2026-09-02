@@ -1,0 +1,23 @@
+[
+    {
+        "codigo": "P001",
+        "nombre": "Coca Cola",
+        "categoria": "Bebida",
+        "precio": 12.0,
+        "stock": 20
+    },
+    {
+        "codigo": "P002",
+        "nombre": "Pizza",
+        "categoria": "Comida",
+        "precio": 45.0,
+        "stock": 8
+    },
+    {
+        "codigo": "P003",
+        "nombre": "Hamburguesa",
+        "categoria": "Comida",
+        "precio": 30.0,
+        "stock": 10
+    }
+]
