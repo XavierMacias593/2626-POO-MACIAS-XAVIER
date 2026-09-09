@@ -1,0 +1,23 @@
+[
+    {
+        "codigo": "P001",
+        "nombre": "Hamburguesa",
+        "categoria": "Platos fuertes",
+        "precio": 25.0,
+        "stock": 15
+    },
+    {
+        "codigo": "P002",
+        "nombre": "Pizza",
+        "categoria": "Platos fuertes",
+        "precio": 30.0,
+        "stock": 10
+    },
+    {
+        "codigo": "P003",
+        "nombre": "Jugo natural",
+        "categoria": "Bebidas",
+        "precio": 8.0,
+        "stock": 20
+    }
+]
